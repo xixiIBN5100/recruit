@@ -31,4 +31,7 @@ activeIndex.value = key
 .el-menu--horizontal > .el-menu-item:nth-child(1) {
   margin-right: auto;
 }
+body {
+  background-color: gray;
+}
 </style>
