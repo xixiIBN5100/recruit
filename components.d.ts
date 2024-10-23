@@ -8,13 +8,12 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Card: typeof import('./src/components/Card.vue')['default']
+    DetailInfo: typeof import('./src/components/DetailInfo.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
-    ElDivider: typeof import('element-plus/es')['ElDivider']
-    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElDrawer: typeof import('element-plus/es')['ElDrawer']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
-    ElPageHeader: typeof import('element-plus/es')['ElPageHeader']
     ElTag: typeof import('element-plus/es')['ElTag']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

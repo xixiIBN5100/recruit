@@ -1,5 +1,7 @@
 <template>
-  <div style="background-color: #e6e6e6; border-radius: 10px; min-width: 180px;flex: 1;cursor: pointer">
+  <DetailInfo v-model="detailVisible" :name="props.name" :state="props.state" :beginTime="props.beginTime" 
+  :recruitState="props.recruitState" :place="props.place" :recruit="props.recruit" :link="link" :introduce="props.introduce"/>
+  <div style="background-color: #e6e6e6; border-radius: 10px; min-width: 180px;flex: 1;cursor: pointer" @click="() => detailVisible = true">
     <div style="display: flex; margin-top: 20px; padding: 0 15px;">
     <div style="font-size: 1rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
       {{ props.name }}
@@ -26,6 +28,7 @@
 
 
 <script setup lang="ts">
+import DetailInfo from "./DetailInfo.vue";
 import {ref} from "vue";
 const props = defineProps<{
   name: string,
@@ -68,6 +71,9 @@ const showDate = ref([
     content: props.introduce
   }
 ])
+
+//抽屉可见性
+const detailVisible = ref(false)
 </script>
 
 
